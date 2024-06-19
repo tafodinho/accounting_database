@@ -1,0 +1,61 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profit_before_income_tax: 9.99
+  depreciation_on_property_plant_and_equiptments: 9.99
+  profit_on_disposal: 9.99
+  amortisation_of_prepaid_lease: 9.99
+  amortisation_of_intangible_assets: 9.99
+  interest_expense: 9.99
+  operating_profit_before_working_capital_changes: 9.99
+  inventories: 9.99
+  trade_and_other_recievables: 9.99
+  trade_and_other_payables: 9.99
+  cash_generated_from_operations: 9.99
+  tax: 9.99
+  interest_paid: 9.99
+  net_cash_generated_from_operating_activities: 9.99
+  purchase_of_property_plant_and_equiptments: 9.99
+  purchase_of_prepaid_operating_lease_rentals: 9.99
+  proceeds_from_sale_of_property_plant_and_equiptments: 9.99
+  intangible_assets: 9.99
+  interest_income: 9.99
+  net_cash_used_in_investing_activities: 9.99
+  proceeds_from_issue_of_share_capital: 9.99
+  proceeds_from_borrowing: 9.99
+  repayments_of_borrowing: 9.99
+  net_cash_generated_from_financial_activities: 9.99
+  net_decrease_in_cash_and_cash_equivalents: 9.99
+  cash_and_cash_equivalent_at_1st_january: 9.99
+  cash_and_cash_equivalent_at_31st_december: 9.99
+  company: one
+
+two:
+  profit_before_income_tax: 9.99
+  depreciation_on_property_plant_and_equiptments: 9.99
+  profit_on_disposal: 9.99
+  amortisation_of_prepaid_lease: 9.99
+  amortisation_of_intangible_assets: 9.99
+  interest_expense: 9.99
+  operating_profit_before_working_capital_changes: 9.99
+  inventories: 9.99
+  trade_and_other_recievables: 9.99
+  trade_and_other_payables: 9.99
+  cash_generated_from_operations: 9.99
+  tax: 9.99
+  interest_paid: 9.99
+  net_cash_generated_from_operating_activities: 9.99
+  purchase_of_property_plant_and_equiptments: 9.99
+  purchase_of_prepaid_operating_lease_rentals: 9.99
+  proceeds_from_sale_of_property_plant_and_equiptments: 9.99
+  intangible_assets: 9.99
+  interest_income: 9.99
+  net_cash_used_in_investing_activities: 9.99
+  proceeds_from_issue_of_share_capital: 9.99
+  proceeds_from_borrowing: 9.99
+  repayments_of_borrowing: 9.99
+  net_cash_generated_from_financial_activities: 9.99
+  net_decrease_in_cash_and_cash_equivalents: 9.99
+  cash_and_cash_equivalent_at_1st_january: 9.99
+  cash_and_cash_equivalent_at_31st_december: 9.99
+  company: two

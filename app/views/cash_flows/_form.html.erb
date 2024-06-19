@@ -1,0 +1,157 @@
+<%= form_with(model: cash_flow) do |form| %>
+  <% if cash_flow.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cash_flow.errors.count, "error") %> prohibited this cash_flow from being saved:</h2>
+
+      <ul>
+        <% cash_flow.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :profit_before_income_tax, style: "display: block" %>
+    <%= form.text_field :profit_before_income_tax %>
+  </div>
+
+  <div>
+    <%= form.label :depreciation_on_property_plant_and_equiptments, style: "display: block" %>
+    <%= form.text_field :depreciation_on_property_plant_and_equiptments %>
+  </div>
+
+  <div>
+    <%= form.label :profit_on_disposal, style: "display: block" %>
+    <%= form.text_field :profit_on_disposal %>
+  </div>
+
+  <div>
+    <%= form.label :amortisation_of_prepaid_lease, style: "display: block" %>
+    <%= form.text_field :amortisation_of_prepaid_lease %>
+  </div>
+
+  <div>
+    <%= form.label :amortisation_of_intangible_assets, style: "display: block" %>
+    <%= form.text_field :amortisation_of_intangible_assets %>
+  </div>
+
+  <div>
+    <%= form.label :interest_expense, style: "display: block" %>
+    <%= form.text_field :interest_expense %>
+  </div>
+
+  <div>
+    <%= form.label :operating_profit_before_working_capital_changes, style: "display: block" %>
+    <%= form.text_field :operating_profit_before_working_capital_changes %>
+  </div>
+
+  <div>
+    <%= form.label :inventories, style: "display: block" %>
+    <%= form.text_field :inventories %>
+  </div>
+
+  <div>
+    <%= form.label :trade_and_other_recievables, style: "display: block" %>
+    <%= form.text_field :trade_and_other_recievables %>
+  </div>
+
+  <div>
+    <%= form.label :trade_and_other_payables, style: "display: block" %>
+    <%= form.text_field :trade_and_other_payables %>
+  </div>
+
+  <div>
+    <%= form.label :cash_generated_from_operations, style: "display: block" %>
+    <%= form.text_field :cash_generated_from_operations %>
+  </div>
+
+  <div>
+    <%= form.label :tax, style: "display: block" %>
+    <%= form.text_field :tax %>
+  </div>
+
+  <div>
+    <%= form.label :interest_paid, style: "display: block" %>
+    <%= form.text_field :interest_paid %>
+  </div>
+
+  <div>
+    <%= form.label :net_cash_generated_from_operating_activities, style: "display: block" %>
+    <%= form.text_field :net_cash_generated_from_operating_activities %>
+  </div>
+
+  <div>
+    <%= form.label :purchase_of_property_plant_and_equiptments, style: "display: block" %>
+    <%= form.text_field :purchase_of_property_plant_and_equiptments %>
+  </div>
+
+  <div>
+    <%= form.label :purchase_of_prepaid_operating_lease_rentals, style: "display: block" %>
+    <%= form.text_field :purchase_of_prepaid_operating_lease_rentals %>
+  </div>
+
+  <div>
+    <%= form.label :proceeds_from_sale_of_property_plant_and_equiptments, style: "display: block" %>
+    <%= form.text_field :proceeds_from_sale_of_property_plant_and_equiptments %>
+  </div>
+
+  <div>
+    <%= form.label :intangible_assets, style: "display: block" %>
+    <%= form.text_field :intangible_assets %>
+  </div>
+
+  <div>
+    <%= form.label :interest_income, style: "display: block" %>
+    <%= form.text_field :interest_income %>
+  </div>
+
+  <div>
+    <%= form.label :net_cash_used_in_investing_activities, style: "display: block" %>
+    <%= form.text_field :net_cash_used_in_investing_activities %>
+  </div>
+
+  <div>
+    <%= form.label :proceeds_from_issue_of_share_capital, style: "display: block" %>
+    <%= form.text_field :proceeds_from_issue_of_share_capital %>
+  </div>
+
+  <div>
+    <%= form.label :proceeds_from_borrowing, style: "display: block" %>
+    <%= form.text_field :proceeds_from_borrowing %>
+  </div>
+
+  <div>
+    <%= form.label :repayments_of_borrowing, style: "display: block" %>
+    <%= form.text_field :repayments_of_borrowing %>
+  </div>
+
+  <div>
+    <%= form.label :net_cash_generated_from_financial_activities, style: "display: block" %>
+    <%= form.text_field :net_cash_generated_from_financial_activities %>
+  </div>
+
+  <div>
+    <%= form.label :net_decrease_in_cash_and_cash_equivalents, style: "display: block" %>
+    <%= form.text_field :net_decrease_in_cash_and_cash_equivalents %>
+  </div>
+
+  <div>
+    <%= form.label :cash_and_cash_equivalent_at_1st_january, style: "display: block" %>
+    <%= form.text_field :cash_and_cash_equivalent_at_1st_january %>
+  </div>
+
+  <div>
+    <%= form.label :cash_and_cash_equivalent_at_31st_december, style: "display: block" %>
+    <%= form.text_field :cash_and_cash_equivalent_at_31st_december %>
+  </div>
+
+  <div>
+    <%= form.label :company_id, style: "display: block" %>
+    <%= form.text_field :company_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

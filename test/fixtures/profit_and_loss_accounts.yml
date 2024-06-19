@@ -1,0 +1,31 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sales: 9.99
+  cost_of_sales: 9.99
+  gross_profit: 9.99
+  other_operating_income: 9.99
+  administrative_expenses: 9.99
+  other_operating_expenses: 9.99
+  operating_profit: 9.99
+  finance_cost: 9.99
+  profit_before_tax: 9.99
+  tax: 9.99
+  net_profit_for_the_year: 9.99
+  date_of_report: 2024-02-28 05:45:33
+  company: one
+
+two:
+  sales: 9.99
+  cost_of_sales: 9.99
+  gross_profit: 9.99
+  other_operating_income: 9.99
+  administrative_expenses: 9.99
+  other_operating_expenses: 9.99
+  operating_profit: 9.99
+  finance_cost: 9.99
+  profit_before_tax: 9.99
+  tax: 9.99
+  net_profit_for_the_year: 9.99
+  date_of_report: 2024-02-28 05:45:33
+  company: two

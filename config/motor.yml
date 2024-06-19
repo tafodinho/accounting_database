@@ -1,0 +1,84 @@
+---
+engine_version: 0.4.26
+file_version: 2024-06-03 15:11:34.162050000 Z
+resources:
+- name: user
+  preferences:
+    columns:
+    - access_type: hidden
+      name: reset_password_sent_at
+    - access_type: hidden
+      name: remember_created_at
+    - name: password
+      display_name: Password
+      column_type: string
+      access_type: write_only
+      virtual: true
+      validators: []
+  updated_at: 2024-06-03 15:11:34.162050000 +00:00
+configs:
+- key: header.links
+  value:
+  - name: "⭐ Star on GitHub"
+    path: https://github.com/motor-admin/motor-admin-rails
+  updated_at: 2024-05-03 15:41:48.874086000 +00:00
+queries:
+- id: 1
+  name: balance sheet
+  sql_body: SELECT date_of_report, share_capital from balance_sheets where company_id
+    = 10;
+  description: share capital in time for company number 10
+  preferences:
+    query_type: sql
+    database: primary
+    visualization: bar_chart
+    visualization_options:
+      label_format: currency
+      label_format_options:
+        currency: XAF
+      chart_values_axis: true
+      chart_stacked: true
+    variables: []
+    api_config_name: origin
+  tags: []
+  updated_at: 2024-05-03 16:33:15.228635000 +00:00
+- id: 2
+  name: total sales of all companies
+  sql_body: "SELECT c.name, SUM(pl.sales) as total_sales \nfrom companies c \njoin
+    profit_and_loss_accounts pl on c.id = pl.company_id\ngroup by c.name;"
+  description: total sales of all companies
+  preferences:
+    query_type: sql
+    database: primary
+    visualization: bar_chart
+    visualization_options:
+      label_format: currency
+      label_format_options:
+        currency: XAF
+      chart_values_axis: true
+      chart_stacked: true
+    variables: []
+    api_config_name: origin
+  tags: []
+  updated_at: 2024-05-04 05:09:55.387852000 +00:00
+dashboards:
+- id: 1
+  title: Company Dashboard
+  description: Compnay Dashboared
+  preferences:
+    layout:
+    - title: Companies
+      query_id: 1
+      size: 5x2
+    variables: []
+  tags: []
+  updated_at: 2024-05-03 15:57:17.978606000 +00:00
+forms: []
+alerts: []
+api_configs:
+- id: 1
+  name: origin
+  url: origin
+  preferences: {}
+  description:
+  updated_at: 2024-06-03 15:10:30.233844000 +00:00

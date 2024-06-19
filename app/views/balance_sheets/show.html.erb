@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @balance_sheet %>
+
+<div>
+  <%= link_to "Edit this balance sheet", edit_balance_sheet_path(@balance_sheet) %> |
+  <%= link_to "Back to balance sheets", balance_sheets_path %>
+
+  <%= button_to "Destroy this balance sheet", @balance_sheet, method: :delete %>
+</div>

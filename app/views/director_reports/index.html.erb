@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Director reports</h1>
+
+<div id="director_reports">
+  <% @director_reports.each do |director_report| %>
+    <%= render director_report %>
+    <p>
+      <%= link_to "Show this director report", director_report %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New director report", new_director_report_path %>

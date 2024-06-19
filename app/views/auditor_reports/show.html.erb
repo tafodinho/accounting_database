@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @auditor_report %>
+
+<div>
+  <%= link_to "Edit this auditor report", edit_auditor_report_path(@auditor_report) %> |
+  <%= link_to "Back to auditor reports", auditor_reports_path %>
+
+  <%= button_to "Destroy this auditor report", @auditor_report, method: :delete %>
+</div>

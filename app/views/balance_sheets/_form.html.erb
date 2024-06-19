@@ -1,0 +1,92 @@
+<%= form_with(model: balance_sheet) do |form| %>
+  <% if balance_sheet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(balance_sheet.errors.count, "error") %> prohibited this balance_sheet from being saved:</h2>
+
+      <ul>
+        <% balance_sheet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :share_capital, style: "display: block" %>
+    <%= form.text_field :share_capital %>
+  </div>
+
+  <div>
+    <%= form.label :retained_earnings, style: "display: block" %>
+    <%= form.text_field :retained_earnings %>
+  </div>
+
+  <div>
+    <%= form.label :shareholder_funds, style: "display: block" %>
+    <%= form.text_field :shareholder_funds %>
+  </div>
+
+  <div>
+    <%= form.label :borrowings, style: "display: block" %>
+    <%= form.text_field :borrowings %>
+  </div>
+
+  <div>
+    <%= form.label :property_and_equiptments, style: "display: block" %>
+    <%= form.text_field :property_and_equiptments %>
+  </div>
+
+  <div>
+    <%= form.label :prepaid_operating_lease_rentals, style: "display: block" %>
+    <%= form.text_field :prepaid_operating_lease_rentals %>
+  </div>
+
+  <div>
+    <%= form.label :intangible_assets, style: "display: block" %>
+    <%= form.text_field :intangible_assets %>
+  </div>
+
+  <div>
+    <%= form.label :deffered_tax, style: "display: block" %>
+    <%= form.text_field :deffered_tax %>
+  </div>
+
+  <div>
+    <%= form.label :inventories, style: "display: block" %>
+    <%= form.text_field :inventories %>
+  </div>
+
+  <div>
+    <%= form.label :trade_and_other_receivables, style: "display: block" %>
+    <%= form.text_field :trade_and_other_receivables %>
+  </div>
+
+  <div>
+    <%= form.label :cash_at_bank_and_in_hand, style: "display: block" %>
+    <%= form.text_field :cash_at_bank_and_in_hand %>
+  </div>
+
+  <div>
+    <%= form.label :trade_and_other_payables, style: "display: block" %>
+    <%= form.text_field :trade_and_other_payables %>
+  </div>
+
+  <div>
+    <%= form.label :current_tax, style: "display: block" %>
+    <%= form.text_field :current_tax %>
+  </div>
+
+  <div>
+    <%= form.label :date_of_report, style: "display: block" %>
+    <%= form.datetime_field :date_of_report %>
+  </div>
+
+  <div>
+    <%= form.label :company_id, style: "display: block" %>
+    <%= form.text_field :company_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

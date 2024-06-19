@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @profit_and_loss_account %>
+
+<div>
+  <%= link_to "Edit this profit and loss account", edit_profit_and_loss_account_path(@profit_and_loss_account) %> |
+  <%= link_to "Back to profit and loss accounts", profit_and_loss_accounts_path %>
+
+  <%= button_to "Destroy this profit and loss account", @profit_and_loss_account, method: :delete %>
+</div>

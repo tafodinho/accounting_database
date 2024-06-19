@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Auditor reports</h1>
+
+<div id="auditor_reports">
+  <% @auditor_reports.each do |auditor_report| %>
+    <%= render auditor_report %>
+    <p>
+      <%= link_to "Show this auditor report", auditor_report %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New auditor report", new_auditor_report_path %>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Balance sheets</h1>
+
+<div id="balance_sheets">
+  <% @balance_sheets.each do |balance_sheet| %>
+    <%= render balance_sheet %>
+    <p>
+      <%= link_to "Show this balance sheet", balance_sheet %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New balance sheet", new_balance_sheet_path %>

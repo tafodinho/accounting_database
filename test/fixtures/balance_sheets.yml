@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  share_capital: 9.99
+  retained_earnings: 9.99
+  shareholder_funds: 9.99
+  borrowings: 9.99
+  property_and_equiptments: 9.99
+  prepaid_operating_lease_rentals: 9.99
+  intangible_assets: 9.99
+  deffered_tax: 9.99
+  inventories: 9.99
+  trade_and_other_receivables: 9.99
+  cash_at_bank_and_in_hand: 9.99
+  trade_and_other_payables: 9.99
+  current_tax: 9.99
+  date_of_report: 2024-02-28 05:52:55
+  company: one
+
+two:
+  share_capital: 9.99
+  retained_earnings: 9.99
+  shareholder_funds: 9.99
+  borrowings: 9.99
+  property_and_equiptments: 9.99
+  prepaid_operating_lease_rentals: 9.99
+  intangible_assets: 9.99
+  deffered_tax: 9.99
+  inventories: 9.99
+  trade_and_other_receivables: 9.99
+  cash_at_bank_and_in_hand: 9.99
+  trade_and_other_payables: 9.99
+  current_tax: 9.99
+  date_of_report: 2024-02-28 05:52:55
+  company: two

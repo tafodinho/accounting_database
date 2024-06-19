@@ -1,0 +1,82 @@
+<%= form_with(model: profit_and_loss_account) do |form| %>
+  <% if profit_and_loss_account.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(profit_and_loss_account.errors.count, "error") %> prohibited this profit_and_loss_account from being saved:</h2>
+
+      <ul>
+        <% profit_and_loss_account.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :sales, style: "display: block" %>
+    <%= form.text_field :sales %>
+  </div>
+
+  <div>
+    <%= form.label :cost_of_sales, style: "display: block" %>
+    <%= form.text_field :cost_of_sales %>
+  </div>
+
+  <div>
+    <%= form.label :gross_profit, style: "display: block" %>
+    <%= form.text_field :gross_profit %>
+  </div>
+
+  <div>
+    <%= form.label :other_operating_income, style: "display: block" %>
+    <%= form.text_field :other_operating_income %>
+  </div>
+
+  <div>
+    <%= form.label :administrative_expenses, style: "display: block" %>
+    <%= form.text_field :administrative_expenses %>
+  </div>
+
+  <div>
+    <%= form.label :other_operating_expenses, style: "display: block" %>
+    <%= form.text_field :other_operating_expenses %>
+  </div>
+
+  <div>
+    <%= form.label :operating_profit, style: "display: block" %>
+    <%= form.text_field :operating_profit %>
+  </div>
+
+  <div>
+    <%= form.label :finance_cost, style: "display: block" %>
+    <%= form.text_field :finance_cost %>
+  </div>
+
+  <div>
+    <%= form.label :profit_before_tax, style: "display: block" %>
+    <%= form.text_field :profit_before_tax %>
+  </div>
+
+  <div>
+    <%= form.label :tax, style: "display: block" %>
+    <%= form.text_field :tax %>
+  </div>
+
+  <div>
+    <%= form.label :net_profit_for_the_year, style: "display: block" %>
+    <%= form.text_field :net_profit_for_the_year %>
+  </div>
+
+  <div>
+    <%= form.label :date_of_report, style: "display: block" %>
+    <%= form.datetime_field :date_of_report %>
+  </div>
+
+  <div>
+    <%= form.label :company_id, style: "display: block" %>
+    <%= form.text_field :company_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

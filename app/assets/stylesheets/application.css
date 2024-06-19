@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.ivu-menu {
+  display: none !important;
+}
