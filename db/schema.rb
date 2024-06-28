@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_06_03_142925) do
+ActiveRecord::Schema[7.0].define(version: 2024_06_19_134709) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -315,6 +315,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_03_142925) do
     t.index ["company_id"], name: "index_profit_and_loss_accounts_on_company_id"
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "plan_type"
+    t.decimal "price"
+    t.integer "duration"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -324,6 +335,9 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_03_142925) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "admin", default: false
+    t.string "subscription_status"
+    t.string "plan_type"
+    t.datetime "subscription_end_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -338,4 +352,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_06_03_142925) do
   add_foreign_key "motor_note_tag_tags", "motor_notes", column: "note_id"
   add_foreign_key "motor_taggable_tags", "motor_tags", column: "tag_id"
   add_foreign_key "profit_and_loss_accounts", "companies"
+  add_foreign_key "subscriptions", "users"
 end

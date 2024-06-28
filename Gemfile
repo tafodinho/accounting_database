@@ -78,12 +78,11 @@ group :test do
 
 end
 
-gem 'rails_admin'
-gem "cssbundling-rails"
-
 gem "motor-admin", "~> 0.4.26"
 
 gem "devise", "~> 4.9"
 
 gem "tailwindcss-rails", "~> 2.6"
 gem "pg"
+gem 'stripe'
+gem "dockerfile-rails", ">= 1.6", :group => :development

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'webhooks/stripe', to: 'webhooks#stripe'
+
   devise_for :users do 
     get "signup", to: "devise/registrations#new"
     get "login", to: "devise/sessions#new"
@@ -7,6 +9,7 @@ Rails.application.routes.draw do
 
   authenticate :user do
     mount Motor::Admin => '/dashboard'
+    resources :subscriptions, only: [:new, :create]
   end
 
   resources :cash_flows

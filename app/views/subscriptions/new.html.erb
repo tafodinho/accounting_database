@@ -1,0 +1,35 @@
+<!-- app/views/subscriptions/new.html.erb -->
+<h1>Subscribe</h1>
+<%= form_for @subscription, url: subscriptions_path do |f| %>
+  <div>
+    <%= f.label :plan_type %>
+    <%= f.select :plan_type, options_for_select([['Basic', 'basic'], ['Premium', 'premium']]) %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.number_field :price %>
+  </div>
+
+  <div>
+    <%= f.label :duration %>
+    <%= f.number_field :duration %>
+  </div>
+
+  <div>
+    <%= label_tag :card_number, 'Credit Card Number' %>
+    <%= text_field_tag :card_number, nil, id: 'card_number' %>
+  </div>
+
+  <div>
+    <%= label_tag :card_expiry, 'Expiration Date' %>
+    <%= text_field_tag :card_expiry, nil, id: 'card_expiry' %>
+  </div>
+
+  <div>
+    <%= label_tag :card_cvc, 'CVC' %>
+    <%= text_field_tag :card_cvc, nil, id: 'card_cvc' %>
+  </div>
+
+  <%= f.submit 'Subscribe' %>
+<% end %>

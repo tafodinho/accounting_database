@@ -27,6 +27,6 @@ test:
 
 production:
   <<: *default
-  database: accounting_reports
-  username: postgres
-  password: postgres
+  database: <%= ENV["POSTGRES_DB"] %>
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
