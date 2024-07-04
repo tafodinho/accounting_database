@@ -1,6 +1,6 @@
 ---
 engine_version: 0.4.26
-file_version: 2024-06-03 15:11:34.162050000 Z
+file_version: 2024-06-28 09:49:00.261557000 Z
 resources:
 - name: user
   preferences:
@@ -19,9 +19,11 @@ resources:
 configs:
 - key: header.links
   value:
-  - name: "⭐ Star on GitHub"
-    path: https://github.com/motor-admin/motor-admin-rails
-  updated_at: 2024-05-03 15:41:48.874086000 +00:00
+  - name: Reports
+    link_type: reports
+  - name: Forms
+    link_type: forms
+  updated_at: 2024-06-28 09:49:00.261557000 +00:00
 queries:
 - id: 1
   name: balance sheet

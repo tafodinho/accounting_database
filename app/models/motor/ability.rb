@@ -9,6 +9,8 @@ module Motor
         else
           can :manage, :all
           cannot :read, User
+          cannot :read, PrincipalActivity
+          cannot :read, Subscription
         end
       end
 

@@ -1,0 +1,2 @@
+class PrincipalActivity < ApplicationRecord
+end

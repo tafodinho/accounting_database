@@ -86,3 +86,5 @@ gem "tailwindcss-rails", "~> 2.6"
 gem "pg"
 gem 'stripe'
 gem "dockerfile-rails", ">= 1.6", :group => :development
+gem "roo"
+gem "roo-xls"
