@@ -40,9 +40,7 @@ jobs:
             type=sha
 
       - name: Login to GitHub Container Registry
-        env:
-          GH_TOKEN: ${{ steps.generate-token.outputs.token }}
-        run: echo "${{ env.GH_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+        run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Build and push Docker images using Bake
         uses: docker/bake-action@v4
