@@ -94,14 +94,7 @@ jobs:
           # passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            if [ ! -d "accounting-database" ]; then
-              echo "Repository not found. Cloning..."
-              git clone https://github.com/${{ github.repository }} accounting-database
-            else
-              echo "✅ Pulling from GitHub"
-              cd accounting-database
-              git pull
-            fi
+            cd accounting
             docker stop ${{ env.IMAGE_NAME }}
             docker rm ${{ env.IMAGE_NAME }}
             docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{env.IMAGE_TAG}}
