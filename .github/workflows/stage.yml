@@ -1,7 +1,7 @@
 name: Build and Deploy (stage)
 env:
-  REGISTRY: ghcr.io/tafodinho  # Update your-organization with your organization's name
-  IMAGE_NAME: account-database
+  REGISTRY: ghcr.io  # Update your-organization with your organization's name
+  IMAGE_NAME: ${{ github.repository }}
   IMAGE_TAG: dev
 on: 
   workflow_dispatch:
@@ -18,6 +18,11 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
     steps:
       - name: 🏗 Setup repo
         uses: actions/checkout@v4
